@@ -16,3 +16,5 @@ INSERT INTO characters (name, species, motto, author_id) VALUES ("Lord Voldemort
 INSERT INTO characters (name, species, motto, author_id) VALUES ("Professor Minverva McGonagall", "Half-blood", "They're supposed to be, you blithering idiot.", 2);
 INSERT INTO authors (name) VALUES ("C. S. Lewis");
 INSERT INTO authors (name) VALUES ("J. k. Rowling");
+INSERT INTO subgenres (name) VALUES ("Action and Adventure");
+INSERT INTO subgenres (name) VALUES ("Childrens");
