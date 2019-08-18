@@ -6,70 +6,62 @@ def select_books_titles_and_years_in_first_series_order_by_year
 end
 
 def select_name_and_motto_of_char_with_longest_motto
-  "SELECT name, motto
-  FROM characters
-  WHERE
-  motto = (SELECT MAX(motto) FROM characters);"
 
-  # returns the name and motto of the character with the longest motto
+  "SELECT MAX(name), motto FROM characters;"
+
 end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT
-    species,
-    COUNT(*)
-  FROM characters
-  GROUP BY species ASC;"
 
-  # it 'determines the most prolific species of characters and return its value and count' do
+  "SELECT MAX(species), COUNT(*)
+FROM characters
+GROUP BY species
+ORDER BY COUNT(species) DESC
+LIMIT 1;"
 
 end
 
 def select_name_and_series_subgenres_of_authors
-  # "SELECT
-  #   books.name,
-  #   subgenres.name
-  # FROM authors
-  # ;"
 
   "SELECT
     authors.name,
     subgenres.name
   FROM
     authors
+  INNER JOIN series
+    ON authors.id = series.author_id
   INNER JOIN subgenres
+    ON series.subgenre_id = subgenres.id
   GROUP BY
     authors.name;"
 end
 
 def select_series_title_with_most_human_characters
-  # "SELECT
-  #   series.title,
-  #   characters.species,
-  # FROM series
-  # INNER JOIN characters
-  # ON characters.id = character_books.character_id
-  # WHERE characters.species = 'human'
-  #
-  # ;"
 
-  "
-  SELECT
-    series.title,
-    MAX(characters.species)
+  "SELECT
+    series.title
   FROM
-    series,
+    series
+  INNER JOIN
+    books
+  ON
+    series.id = books.series_id
+  INNER JOIN
+    character_books
+  ON
+    books.id = character_books.character_id
+  INNER JOIN
     characters
-  INNER JOIN character_books
-  ON characters.id = character_books.character_id
+  ON
+    character_books.character_id = characters.id
   WHERE
     characters.species = 'human'
+  GROUP BY
+    series.title
   ORDER BY
-    MAX(characters.species)
-  ;"
-
-  # it 'selects the series title with the most characters that are the species "human"' do
+    COUNT(characters.species) DESC
+  LIMIT 1;"
 
 end
 
