@@ -3,7 +3,7 @@ INSERT INTO series (id, title, author_id, subgenre_id) VALUES
 (2, "Silo", 2, 2);
 
 INSERT INTO books (id, title, year, series_id) VALUES 
-(1, "Harry Potter and The Sorcerers Stone", 1997, 1), 
+(1, "Harry Potter and The Sorcerer's Stone", 1997, 1), 
 (2, "Harry Potter and the Chamber of Secrets", 1998, 1), 
 (3, "Harry Potter and the Prisoner of Azkaban", 1999, 1), 
 (4, "Wool", 2011, 2), 
@@ -16,7 +16,7 @@ INSERT INTO characters (id, name, motto, species, author_id) VALUES
 (3, "Lord Voldemort", "I AM LORD VOLDEMORT.", "half-blood", 1),
  (4, "Ron Weasley", "Of all the trees we could’ve hit, we had to get one that hits back.", "wizard", 1), 
  (5, "Dobby", "You shall go now.", "elf", 1), 
- (6, "Juliette", "I'm a machinist.", "human", 2) 
+ (6, "Juliette", "I'm a machinist.", "human", 2),
  (7, "Draco Malfoy", "Sanctimonia Vincet Semper", "wizard", 1), 
  (8, "Holston", "I'm the Sheriff.", "human", 2);
 
