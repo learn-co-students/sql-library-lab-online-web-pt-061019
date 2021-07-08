@@ -1,0 +1,23 @@
+INSERT INTO series (title, author_id, subgenre_id) VALUES ("The Chronicles of Narnia", 1, 1);
+INSERT INTO series (title, author_id, subgenre_id) VALUES ("Harry Potter", 2, 2);
+INSERT INTO books (title, year, series_id) VALUES ("The Lion, the Witch, and the Wardrobe", 2009, 1);
+INSERT INTO books (title, year, series_id) VALUES ("The Magician's Nephew", 2009, 2);
+INSERT INTO books (title, year, series_id) VALUES ("Prince Caspian", 2009, 3);
+INSERT INTO books (title, year, series_id) VALUES ("Harry Potter: The Prequel", 2008, 1);
+INSERT INTO books (title, year, series_id) VALUES ("Harry Potter and the Sorceror's Stone", 1997, 2);
+INSERT INTO books (title, year, series_id) VALUES ("Harry Potter and the Chamber of Secrets", 1998, 3); 
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Aslan", "diety", "Courage, dear heart!", 1, 1);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Queen Lucy, the Valiant", "human", "I'm ready now.", 1, 1);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Jadis, the White Witch", "Half-Jinn/Half-Giant", "If it's a war Aslan wants, it's a war he shall get.", 1, 1);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Mr. Beaver,", "Semi-aquatic Rodent", "'Course he isn’t safe. But he’s good. He’s the King, I tell you.", 1, 1);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Harry Potter", "Wizard", "One can never have enough socks.", 2, 2);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Dobby", "Elf", "Socks are Dobby's favourite clothes, sir.", 2, 2);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Lord Voldemort", "Half-blood", "There is no good and evil, there is only power and those too weak to seek it.", 2, 2);
+INSERT INTO characters (name, species, motto, author_id, series_id) VALUES ("Professor Minverva McGonagall", "Half-blood", "They're supposed to be, you blithering idiot.", 2, 2);
+INSERT INTO authors (name) VALUES ("C. S. Lewis");
+INSERT INTO authors (name) VALUES ("J. k. Rowling");
+INSERT INTO subgenres (name) VALUES ("Action and Adventure");
+INSERT INTO subgenres (name) VALUES ("Childrens");
+INSERT INTO character_books (book_id, character_id) VALUES (1, 1), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3), (1, 4);
+INSERT INTO character_books (book_id, character_id) VALUES (4, 5), (4, 6), (5, 6), (6, 6), (4, 7), (5, 7), (6, 7), (4, 8);
+
